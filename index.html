@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- This sets the language that your characters are in -->
+		<meta charset="utf-8">
+		<!-- This ensures that your media queries work -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- This is what appears in the tab of your browser page -->
+		<title></title>
+
+		<!-- This makes the bootstrap css work -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+		<!-- This connects my CSS external stylesheet to the index.html -->
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+<!-- create a div and give it an ID of "app" -->
+		<div id="app">
+<!-- create a horizontal navbar of five links in this div. Make sure you use router-link elements to create the links, not anchors.			 -->
+			<ul>
+				<li><router-link to="/one">Home</router></li>
+				<li><router-link to="/two">About</router></li>
+				<li><router-link to="/three">Blog</router></li>
+				<li><router-link to="/four">FAQ</router></li>
+				<li><router-link to="/five">Contact</router></li>
+				
+			</ul>
+		
+		
+<!-- Beneath your navbar, create a router-view element. -->
+			<div>
+				<transition name="slide-fade" mode="out-in">
+				<router-view></router-view>
+				</transition>
+			</div>
+
+		</div>
+		
+		<!-- This gives access to the jquery library -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+		<!-- Popper is required for bootstrap 4 JS functionality -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+		<!-- This makes bootstrap 4 JS work -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		<!-- This connects the VueJS framework-->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+		<!-- This connects to VueRouter framework -->
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+		<!-- This connects my JS external file to the index.html -->
+		<script src="js/main.js" type="text/javascript"></script>
+
+	</body>
+</html>
